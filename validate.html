@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.error {
+  color: red;
+  font-size: 0.85em;
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+    </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <!-- Name -->
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter your name">
+      <small class="error" id="nameError"></small>
+
+      <!-- Email -->
+      <label for="email">Email</label>
+      <input type="text" id="email" placeholder="Enter your email">
+      <small class="error" id="emailError"></small>
+
+      <!-- Message -->
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Write your message"></textarea>
+      <small class="error" id="messageError"></small>
+
+      <!-- Submit -->
+      <button type="submit">Submit</button>
+
+      <!-- Success -->
+      <p id="successMsg" class="success"></p>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
